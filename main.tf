@@ -21,6 +21,6 @@ resource "aws_instance" "amazon_linux" {
   instance_type = var.instance_type
   count         = var.instance_count
   tags = {
-    Name = var.random_pet.name[count.index].id
+    Name = random_pet.name[count.index].id
   }
 }

@@ -9,7 +9,3 @@ output "instance_ids" {
 output "instance_public_ips" {
   value = [for instance in aws_instance.amazon_linux : instance.public_ip]
 }
-
-output "instance_ami" {
-  value = data.aws_ami.amazon_linux.id
-}

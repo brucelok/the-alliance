@@ -5,7 +5,7 @@ variable "region" {
 
 variable "instance_ami" {
   description = "Default is Amazon Linux 2023"
-  default = "ami-09f5ddaab17f5ff43"
+  default     = "ami-09f5ddaab17f5ff43"
 }
 
 variable "instance_type" {

@@ -4,26 +4,25 @@ variable "region" {
 }
 
 variable "instance_ami" {
-  description = "Default is Amazon Linux 2023"
-  default     = "ami-09f5ddaab17f5ff43"
+  default = "ami-0f5d1713c9af4fe30"
 }
 
 variable "instance_type" {
-  description = "EC2 Type"
-  default     = "t2.micro"
+  default = "t2.micro"
 }
 
 variable "instance_count" {
-  description = "Number of instances"
-  default     = 1
+  default = 5
 }
 
 variable "key_name" {
-  description = "Name of the key pair to use"
-  default     = "myMacbook"
+  default = "myMacbook"
 }
 
 variable "security_group_id" {
-  description = "ID of the security group"
-  default     = "sg-05583691e895a6b4e"
+  default = "sg-05583691e895a6b4e"
+}
+
+variable "subnet_id" {
+  default = "subnet-0f72be4624adad8ff"
 }

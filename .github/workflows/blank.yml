@@ -15,7 +15,7 @@ on:
 
 jobs:
   plan:
-    if: github.event.inputs.action == 'plan'
+    #if: github.event.inputs.action == 'plan'
     runs-on: self-hosted
     steps:
       - name: Checkout Code
@@ -34,7 +34,7 @@ jobs:
         run: terraform plan
 
   apply:
-    if: github.event.inputs.action == 'apply'
+    #if: github.event.inputs.action == 'apply'
     runs-on: self-hosted
     needs: plan
     steps:
@@ -54,7 +54,7 @@ jobs:
         run: terraform apply -auto-approve
 
   ansible:
-    if: github.event.inputs.action == 'ansible'
+    #if: github.event.inputs.action == 'ansible'
     runs-on: self-hosted
     needs: apply
     steps:

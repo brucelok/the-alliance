@@ -57,3 +57,6 @@ jobs:
     steps:
       - name: display ansible inventory
         run: cat inventory.txt
+
+      - name: run ansible play
+        run: ansible -i inventory.txt all -u ec2-user -m ping

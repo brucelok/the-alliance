@@ -4,7 +4,7 @@ variable "region" {
 }
 
 variable "instance_ami" {
-  default = "ami-0f5d1713c9af4fe30"
+  default = "ami-078772dab3242ee11"
 }
 
 variable "instance_type" {
@@ -12,7 +12,7 @@ variable "instance_type" {
 }
 
 variable "instance_count" {
-  default = 5
+  default = 3
 }
 
 variable "key_name" {

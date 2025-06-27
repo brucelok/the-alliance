@@ -26,5 +26,5 @@ resource "aws_instance" "my_vms" {
 
 resource "local_file" "public_ips_file" {
   content  = "[all]\n${join("\n", aws_instance.my_vms[*].public_dns)}"
-  filename = "${path.module}/public_ips.txt"
+  filename = "${path.module}/inventory.txt"
 }

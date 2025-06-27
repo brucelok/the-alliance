@@ -14,8 +14,8 @@ on:
           - ansible
 
 jobs:
-  if: github.event.inputs.action == 'plan'
   plan:
+    if: github.event.inputs.action == 'plan'
     runs-on: self-hosted
     steps:
       - name: Checkout Code

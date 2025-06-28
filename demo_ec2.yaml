@@ -1,0 +1,22 @@
+---
+- name: Quick Demo Playbook for AWS Linux EC2
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: install 'htop' package
+      ansible.builtin.yum:
+        name: htop
+        state: present
+      tags:
+        - install
+
+    - name: Create a text file in home dir
+      ansible.builtin.copy:
+        content: "This server is managed by Ansible. Hello from Terraform!"
+        dest: /home/ec2-user/welcome.txt
+        owner: ec2-user
+        group: ec2-user
+        mode: '0644'
+      tags:
+        - file

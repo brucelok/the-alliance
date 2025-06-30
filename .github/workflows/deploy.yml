@@ -54,9 +54,9 @@ jobs:
         run: terraform apply -auto-approve
 
   play:
-    if: inputs.action == 'play'
+    #if: inputs.action == 'play'
     runs-on: self-hosted
-    #needs: apply
+    needs: apply
     steps:
       - name: display ansible inventory
         run: cat inventory.txt

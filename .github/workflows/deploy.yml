@@ -62,4 +62,4 @@ jobs:
         run: cat inventory.txt
 
       - name: run ansible play
-        run: ansible-playbook -i inventory.txt all -u ec2-user demo_ec2.yaml
+        run: ansible-playbook -i inventory.txt -u ec2-user demo_ec2.yaml

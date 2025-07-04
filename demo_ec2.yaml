@@ -4,15 +4,15 @@
   become: yes
 
   tasks:
-    - name: install 'htop' package
-      ansible.builtin.yum:
-        name: htop
+    - name: add Ansible user
+      user:
+        name: ansible
         state: present
       tags:
-        - install
+        - user
 
     - name: Create a text file in home dir
-      ansible.builtin.copy:
+      copy:
         content: "This server is managed by Ansible. Hello from Terraform!"
         dest: /home/ec2-user/welcome.txt
         owner: ec2-user
